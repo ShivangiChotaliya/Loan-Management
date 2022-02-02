@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Food Website Design Tutorial</title>
+
+   
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/6af5f97006.js" crossorigin="anonymous"></script>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js -->
+   
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <script type="text/javascript">
+      function validate() {
+       
+  
+            var email = document.getElementById("email").value;
+            var password= document.getElementById("password").value;
+
+            if(email==""){
+                alert("please Enter Email");
+                document.getElementById("email").focus();
+                return false;
+            }
+            else if(password==""){
+                document.getElementById("password").focus();
+                alert("please Enter Password");
+                return false;
+            }
+            else if (!document.frmlogin.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+                document.getElementById("email").focus();
+                alert("Invalid email address");
+                return false;
+            }
+            else if (!document.frmlogin.password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
+                alert("Password Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
+                document.getElementById("password").focus();
+                return false;
+            }
+            else {
+               
+               // alert("success");
+                return true;
+            }
+        }
+
+    </script>
+   
+</head>
+<body>
+    
+<!-- header section starts -->
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-long-arrow-up"></i>Loan.</a>
+    
+    <nav class="navbar">
+        <a class="active" href="index.html#home">home</a>
+        <a href="index.html#service" >Services</a>
+        <a href="index.html#about">about</a>
+        <a href="index.html#contact">contact</a>
+      
+    </nav>
+    
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>        
+        <a href="register.html" class="fas fa-user-plus"></a>
+        <a href="login.html" class="fa fa-sign-in" aria-hidden="true" ></a>
+    </div>
+
+</header>
+<div class="container">
+    <div class="img">
+        <img src="images/hero-img.png">
+    </div>
+    <div class="login-content">
+        <form action="" method="post" name="frmlogin">
+            <img src="images/avtar.JPG">
+            <h2 class="title"><b>Welcome</b></h2>
+               <div class="input-div one">
+                  <div class="i">
+                          <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                          <h5>Email</h5>
+                          <input type="email" class="input" id="email" name="email"><label for="email"></label>
+                  </div>
+               </div>
+               <div class="input-div pass">
+                  <div class="i"> 
+                       <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="div">
+                       <h5>Password</h5>
+                       <input type="password" class="input" id="password" name="password" >
+               </div>
+            </div>
+           
+            <input type="submit" class="btn" value="Login"  onclick="return validate()">
+            <a class="forgot" href="forgotPassword.html">Forgot Password?</a>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
